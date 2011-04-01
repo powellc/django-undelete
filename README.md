@@ -12,6 +12,7 @@ Installation
 2. Add:
 
    `from undelete.models import TrashableMixin
+
     from undelete.managers import TrashableManager`
 
 3. Make sure your model inherits the mixin: 
@@ -24,5 +25,6 @@ Installation
    (And don't forget to explicitly define your original objects manager!)
 
    `objects = models.Manager()
+
     trash = TrashableManager()`
 
