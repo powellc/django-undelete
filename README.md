@@ -11,20 +11,18 @@ Installation
 1. Place 'undelete' in your installed apps.
 2. Add:
 
-   `from undelete.models import TrashableMixin
-
-    from undelete.managers import TrashableManager`
+        from undelete.models import TrashableMixin
+        from undelete.managers import TrashableManager`
 
 3. Make sure your model inherits the mixin: 
 
-   `class YourMode(TrashabeMixin): ...`
+        class YourMode(TrashabeMixin): ...`
 
 4. Add a "trashed_at" datetime field to your model
 5. Finally, add the TrashableManager() to your model 
 
    (And don't forget to explicitly define your original objects manager!)
 
-   `objects = models.Manager()
-
-    trash = TrashableManager()`
+        objects = models.Manager()
+        trash = TrashableManager()`
 
