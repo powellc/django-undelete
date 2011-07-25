@@ -26,3 +26,8 @@ class TrashableMixin(models.Model):
         self.trashed_at = None
         if commit:
             self.save()
+            
+    class Meta:
+        abstract = True
+
+
