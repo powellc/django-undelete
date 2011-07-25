@@ -9,5 +9,5 @@ class NonTrashedManager(models.Manager):
 class TrashedManager(models.Manager):
     ''' Query only objects which have been trashed. '''
     def get_query_set(self):
-        query_set = super(TrashManager, self).get_query_set()
+        query_set = super(TrashedManager, self).get_query_set()
         return query_set.filter(trashed_at__isnull=False)
