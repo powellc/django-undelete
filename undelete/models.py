@@ -10,7 +10,12 @@ class TrashableMixin(models.Model):
     objects = NonTrashedManager()
     trash = TrashedManager()
 
-    def delete(self, *args, **kwargs, trash=True):
+    # delete() method for object is not necessarily called when deleting
+    # objects in bulk using a QuerySet. In future we should probably use 
+    # pre_delete signal.
+    def delete(self, *args, **kwargs):
+        # keyword argument trash has default value True
+        trash=kwargs.get('trash', True)
         if not self.trashed_at and trash:
             self.trashed_at = datetime.now()
             self.save()
