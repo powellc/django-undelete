@@ -22,7 +22,8 @@ In three easy steps!
 And you're done. You should now be able to query trashed items with the "trash" manager and non-trashed items with the usual objects manager.
 
 You can now install django-undelete using pip, for example:
-    pip install git+https://github.com/cpbotha/django-undelete.git
+
+        pip install git+https://github.com/cpbotha/django-undelete.git
 
 See the section below for a more through explanation.
 
