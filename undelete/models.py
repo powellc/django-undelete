@@ -20,7 +20,7 @@ class TrashableMixin(models.Model):
             self.trashed_at = datetime.now()
             self.save()
         else:
-            super(SomeModel, self).delete(*args, **kwargs)
+            super(TrashableMixin, self).delete(*args, **kwargs)
 
     def restore(self, commit=True):
         self.trashed_at = None
