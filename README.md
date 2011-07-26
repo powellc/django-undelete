@@ -58,7 +58,10 @@ With the steps above taken, managing trashed items is fairly straightforward:
 
 Future plans also call for a management command to delete everything trashed a certain period of time ago. Stay tuned!
 
-Caveats
--------
-* delete() method is currently overridden. The [the django documentation](https://docs.djangoproject.com/en/dev/topics/db/models/#overriding-model-methods) states that the delete() method is not always called for bulk deletes based on a QuerySet. In future, django-undelete should make use of the pre_delete signal.
-
+Summary of updates in cpbotha fork
+----------------------------------
+* Implemented TrashableQuerySet so that also bulk deletes of QuerySets will
+  trigger the special TrashableMixin delete() for soft deletion.
+* Created setup.py file so that this can be easily installed with pip or
+  easy_install.
+* Number of smaller code fixes.
