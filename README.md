@@ -17,7 +17,7 @@ In three easy steps!
 
 3. Make sure your model inherits the mixin: 
 
-        class YourMode(TrashabeMixin): ...`   
+        class YourMode(TrashableMixin): ...
 
 And you're done. You should now be able to query trashed items with the "trash" manager and non-trashed items with the usual objects manager.
 
