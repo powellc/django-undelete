@@ -3,7 +3,7 @@ django-undelete
 
 UnDelete is a simple project that gives you access to a TrashableMixin meta model and some useful managers as well.
 
-Much of the work is heavily derivative of Simon Willison's [post on the same topic](http://ltslashgt.com/2007/07/18/undelete-in-django/).
+Much of the work is heavily derivative of Nathan Ostgard's [post on the same topic](http://ltslashgt.com/2007/07/18/undelete-in-django/).
 
 Installation
 -------------
