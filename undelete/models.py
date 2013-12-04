@@ -26,15 +26,3 @@ class TrashableMixin(models.Model):
             
     class Meta:
         abstract = True
-
-	def delete(self, *args, **kwargs, trash=True):
-	    if not self.trashed_at and trash:
-	        self.trashed_at = datetime.now()
-	        self.save()
-	    else:
-	    	super(TrashableMixin, self).delete(*args, **kwargs)
-
-	def restore(self, commit=True):
-		self.trashed_at = None
-		if commit:
-			self.save()
