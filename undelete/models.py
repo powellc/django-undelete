@@ -1,6 +1,9 @@
-from datetime import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+try:
+    from django.utils import timezone as datetime
+except ImportError:
+    from datetime import datetime
 
 from undelete.managers import TrashedManager, NonTrashedManager
 
